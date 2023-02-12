@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://github.com/arashhosseiniarash/AFDDOntology#"
      xml:base="https://github.com/arashhosseiniarash/AFDDOntology"
+     xmlns:bot="https://w3id.org/bot#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -20,6 +21,27 @@
      -->
 
 
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#buildingDimension -->
+
+
+    <owl:AnnotationProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#buildingDimension"/>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#locatedAt -->
+
+
+    <owl:AnnotationProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#locatedAt"/>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#storeyNumber -->
+
+
+    <owl:AnnotationProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#storeyNumber"/>
     
 
 
@@ -72,6 +94,18 @@
     
 
 
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#elementsLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#elementsLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#containsElement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://github.com/arashhosseiniarash/AFDDOntology#faultBelongsTo -->
 
 
@@ -112,6 +146,16 @@
     
 
 
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#hasAssociatedMaintenance -->
+
+
+    <owl:ObjectProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#hasAssociatedMaintenance">
+        <rdfs:domain rdf:resource="https://brickschema.org/schema/Brick#HVAC_Equipment"/>
+        <rdfs:range rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Maintenance"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://github.com/arashhosseiniarash/AFDDOntology#hasFault -->
 
 
@@ -138,6 +182,16 @@
     <owl:ObjectProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#hasMaintenance">
         <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:range rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#MaintenanceAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#hasMaintenanceState -->
+
+
+    <owl:ObjectProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#hasMaintenanceState">
+        <rdfs:domain rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#MaintenanceAction"/>
+        <rdfs:range rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#State"/>
     </owl:ObjectProperty>
     
 
@@ -321,6 +375,34 @@
         <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
         <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#isLocatedExternally -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#isLocatedExternally">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#snippets -->
+
+
+    <owl:DatatypeProperty rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#snippets"/>
     
 
 
@@ -2980,6 +3062,1709 @@ Air intake temperature low</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/bot#Zone">
         <rdfs:comment>A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Drop_out_value -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Drop_out_value">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#HiddenDropoutRatios"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.67</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP">
+        <rdf:type rdf:resource="https://w3id.org/bot#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Oak_Ridge_National_Laboratory -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Oak_Ridge_National_Laboratory">
+        <rdf:type rdf:resource="https://w3id.org/bot#Site"/>
+        <buildingDimension>13.4 × 13.4 m</buildingDimension>
+        <locatedAt>Oak Ridge Tennessee</locatedAt>
+        <storeyNumber>Two-story building</storeyNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Roof -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Roof">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1AXGMA6Jr68eIu$ke0_4zK"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-101 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-101">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-102 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qT"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39ql"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-103 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-103">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qJ"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qi"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-104 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-104">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qk"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qv"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-105 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-105">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qj"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qs"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-106 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-106">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qI"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qY"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-201 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-201">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-202 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-202">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qK"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39q_"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-203 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-203">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qM"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qu"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-204 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-204">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qG"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qw"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-205 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-205">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qH"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qx"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Room-206 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Room-206">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qN"/>
+        <bot:containsElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qV"/>
+        <bot:hasBuilding rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Flexible_Research_Platform_FRP"/>
+        <bot:hasStorey rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#NeuralNetworksOrDeepLearining"/>
+        <algorithmBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Occupancy_Mode_Indicator_1"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_System:_Control_Command"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Discharge_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Suction_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Discharge_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Suction_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Electricity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Fan_Electricity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Fan_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_1_On/Off_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_2_On/Off_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_102_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_103_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_104_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_105_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_106_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_202_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_203_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_204_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_205_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_206_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Heating_Setpoint"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_102_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_103_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_104_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_105_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_106_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_202_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_203_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_204_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_205_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_206_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Occupancy_Mode_Indicator_1"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_System:_Control_Command"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Discharge_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Suction_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Discharge_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Suction_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Electricity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Fan_Electricity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Fan_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_1_On/Off_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_2_On/Off_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_102_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_103_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_104_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_105_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_106_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_202_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_203_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_204_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_205_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_206_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Heating_Setpoint"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_102_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_103_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_104_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_105_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_106_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_202_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_203_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_204_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_205_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_206_Reheat_Status"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Drop_out_value"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#activation_used_for_NN"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#adam"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#categorical_crossentropy"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#patience"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#random_state"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#size_of_each_layer"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#test_size"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#3"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#600"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#Svc -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#Svc">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Svm"/>
+        <algorithmBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Occupancy_Mode_Indicator"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_System:_Control_Command"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Discharge_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Suction_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Discharge_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Suction_Pressure"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Electricity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Fan_Electricity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Fan_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_1_On/Off_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_2_On/Off_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_102_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_103_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_104_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_105_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_106_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_202_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_203_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_204_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_205_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_206_Air_Humidity"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Heating_Setpoint"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_102_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_103_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_104_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_105_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_106_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_202_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_203_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_204_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_205_Reheat_Status"/>
+        <canDetect rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_206_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Occupancy_Mode_Indicator"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_System:_Control_Command"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Discharge_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Suction_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Discharge_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Suction_Pressure"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Electricity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Fan_Electricity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Fan_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_1_On/Off_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_2_On/Off_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_102_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_103_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_104_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_105_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_106_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_202_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_203_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_204_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_205_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_206_Air_Humidity"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Heating_Setpoint"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_102_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_103_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_104_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_105_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_106_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_202_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_203_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_204_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_205_Reheat_Status"/>
+        <canUse rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_206_Reheat_Status"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#rbf"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#svm_scaling"/>
+        <hasParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#activation_used_for_NN -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#activation_used_for_NN">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Activation"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment>relu and softmax</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#adam -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#adam">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Optimizer"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#categorical_crossentropy -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#categorical_crossentropy">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#LossFunction"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#patience -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#patience">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#StoppingTolerance"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#random_state -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#random_state">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#RandomSeed"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#rbf -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#rbf">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#KernelType"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Svc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#size_of_each_layer -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#size_of_each_layer">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#HiddelLayerSize"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment>70-15-7</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#svm_scaling -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#svm_scaling">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Scale"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Svc"/>
+        <rdfs:comment>feature range -1 , 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#test_size -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#test_size">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#TrainSamplesPerIteration"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw6p">
+        <rdf:type rdf:resource="https://w3id.org/bot#Storey"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#02IQ0D8ab0lhjve4Bazw7X">
+        <rdf:type rdf:resource="https://w3id.org/bot#Storey"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#C"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Svc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Condenser_Fouling -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Condenser_Fouling">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Foul"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Excessive_infiltration -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Excessive_infiltration">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Leakage"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-HVAC_Setback_Error -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-HVAC_Setback_Error">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPoint"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_Setback_Error -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_Setback_Error">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#OtherFaults"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-No_Overnight_HVAC_Setback -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-No_Overnight_HVAC_Setback">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPoint"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Occupancy_Mode_Indicator_1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Occupancy_Mode_Indicator_1">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#RTU"/>
+        <hasAlgorithm rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Occupancy_Mode_Indicator_1"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_System:_Control_Command"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Discharge_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Suction_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Discharge_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Suction_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Electricity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Fan_Electricity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Fan_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_1_On/Off_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_2_On/Off_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_102_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_103_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_104_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_105_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_202_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_203_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_204_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_205_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_206_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Heating_Setpoint"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_102_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_103_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_104_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_105_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_106_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_202_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_203_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_204_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_205_Reheat_Status"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Condenser_Fouling"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Excessive_infiltration"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-HVAC_Setback_Error"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_Setback_Error"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-No_Overnight_HVAC_Setback"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-Thermostat_measurement_bias"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qG"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qH"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qI"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qJ"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qK"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qM"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qN"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qT"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qV"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qY"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39q_"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qi"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qj"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qk"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39ql"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qs"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qu"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qv"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qw"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qx"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w1"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w4"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w6"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Thermostat_measurement_bias -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Thermostat_measurement_bias">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#BiasDriftCalibration"/>
+        <faultBelongsTo rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_System:_Control_Command -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Lighting_System:_Control_Command">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Control"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Discharge_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Discharge_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Suction_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_1_Suction_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Condenser_Outlet_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Condenser_Outlet_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Discharge_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Discharge_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Suction_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Circuit_2_Suction_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Electricity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Electricity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#ElectricCurrents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Fan_Electricity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Fan_Electricity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#ElectricCurrents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Fan_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Fan_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Volumetric_Flow_Rate_1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Supply_Air_Volumetric_Flow_Rate_1">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#FlowRate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_1_On/Off_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_1_On/Off_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_2_On/Off_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-RTU:_Compressor_2_On/Off_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_102_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_102_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_103_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_103_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_104_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_104_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_105_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_105_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_106_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_106_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_202_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_202_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_203_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_203_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_204_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_204_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_205_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_205_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_206_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_206_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Cooling_Setpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Cooling_Setpoint">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPointOrSetValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Heating_Setpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-Terminal:_Room_Air_Temperature_Heating_Setpoint">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPointOrSetValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_102_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_102_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_103_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_103_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_104_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_104_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_105_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_105_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_106_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_106_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_202_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_202_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_203_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_203_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_204_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_204_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_205_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_205_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_206_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1-VAV_Box:_Room_206_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1AXGMA6Jr68eIu$ke0_4zK -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1AXGMA6Jr68eIu$ke0_4zK">
+        <rdf:type rdf:resource="https://w3id.org/bot#Storey"/>
+        <rdfs:comment>Roof</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qG -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qG">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-204"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qH -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qH">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-205"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qI -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qI">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-106"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qJ -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qJ">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-103"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qK -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qK">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-202"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qM -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qM">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-203"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qN -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qN">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-206"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qT -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qT">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-102"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qV -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qV">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qY -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qY">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39q_ -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39q_">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qi -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qi">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qj -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qj">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qk -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qk">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39ql -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39ql">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qs -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qs">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-105"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qu -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qu">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</rdfs:comment>
+        <rdfs:comment>Return</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qv -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qv">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Variable_Air_Volume_Box_With_Reheat"/>
+        <elementsLocation rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Room-104"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</rdfs:comment>
+        <rdfs:comment>VE_VAV Box_Round_MEPcontent</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qw -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qw">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qx -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qx">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</rdfs:comment>
+        <rdfs:comment>Return Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w1">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</rdfs:comment>
+        <rdfs:comment>Supply Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w4 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w4">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</rdfs:comment>
+        <rdfs:comment>Supply Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w6 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w6">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</rdfs:comment>
+        <rdfs:comment>Supply Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w7 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w7">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#Displacement_Flow_Air_Diffuser"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</rdfs:comment>
+        <rdfs:comment>Supply Diffuser</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Condenser_Fouling -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Condenser_Fouling">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Foul"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Excessive_infiltration -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Excessive_infiltration">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Leakage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-HVAC_Setback_Error -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-HVAC_Setback_Error">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_Setback_Error -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_Setback_Error">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#OtherFaults"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-No_Overnight_HVAC_Setback -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-No_Overnight_HVAC_Setback">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Occupancy_Mode_Indicator -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Occupancy_Mode_Indicator">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU">
+        <rdf:type rdf:resource="https://brickschema.org/schema/Brick#RTU"/>
+        <hasAlgorithm rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Svc"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Occupancy_Mode_Indicator"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_System:_Control_Command"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Discharge_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Suction_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Condenser_Outlet_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Discharge_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Suction_Pressure"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Electricity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Fan_Electricity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Fan_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Volumetric_Flow_Rate_1"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_1_On/Off_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_2_On/Off_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_102_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_103_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_104_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_105_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_106_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_202_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_203_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_204_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_205_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_206_Air_Humidity"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Cooling_Setpoint"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_102_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_103_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_104_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_105_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_106_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_202_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_203_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_204_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_205_Reheat_Status"/>
+        <hasAssociated rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_206_Reheat_Status"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Condenser_Fouling"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Excessive_infiltration"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-HVAC_Setback_Error"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_Setback_Error"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-No_Overnight_HVAC_Setback"/>
+        <hasFault rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#2-Thermostat_measurement_bias"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qG"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qH"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qI"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qJ"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qK"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qM"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qN"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qT"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qV"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qY"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39q_"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qi"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qj"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qk"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39ql"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qs"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qu"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qv"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qw"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39qx"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w1"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w4"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w6"/>
+        <bot:hasSubElement rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#1Wp7aofZfE$Ravn2Vv39w7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Thermostat_measurement_bias -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Thermostat_measurement_bias">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#BiasDriftCalibration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_System:_Control_Command -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Lighting_System:_Control_Command">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Control"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Discharge_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Discharge_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Suction_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_1_Suction_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Condenser_Outlet_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Condenser_Outlet_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Discharge_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Discharge_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Suction_Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Circuit_2_Suction_Pressure">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Pressure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Electricity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Electricity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#ElectricCurrents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Fan_Electricity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Fan_Electricity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#ElectricCurrents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Fan_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Fan_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Volumetric_Flow_Rate_1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Supply_Air_Volumetric_Flow_Rate_1">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#FlowRate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_1_On/Off_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_1_On/Off_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_2_On/Off_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-RTU:_Compressor_2_On/Off_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_102_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_102_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_103_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_103_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_104_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_104_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_105_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_105_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_106_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_106_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_202_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_202_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_203_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_203_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_204_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_204_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_205_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_205_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_206_Air_Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_206_Air_Humidity">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Cooling_Setpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Cooling_Setpoint">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPointOrSetValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Heating_Setpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-Terminal:_Room_Air_Temperature_Heating_Setpoint">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SetPointOrSetValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_102_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_102_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_103_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_103_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_104_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_104_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_105_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_105_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_106_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_106_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_202_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_202_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_203_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_203_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_204_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_204_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_205_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_205_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_206_Reheat_Status -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#2-VAV_Box:_Room_206_Reheat_Status">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#3">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#HiddenLayerNumber"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/arashhosseiniarash/AFDDOntology#600 -->
+
+
+    <owl:NamedIndividual rdf:about="https://github.com/arashhosseiniarash/AFDDOntology#600">
+        <rdf:type rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#Epochs"/>
+        <isParameter rdf:resource="https://github.com/arashhosseiniarash/AFDDOntology#SequentialNeuralNetworkModel"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
